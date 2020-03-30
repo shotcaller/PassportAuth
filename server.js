@@ -76,7 +76,7 @@ app.post('/register',checkNotAuthenticated, async (req,res) => {
              password : hashedPassword  });
 user.save(function (err) {
   if (err) return handleError(err);
-  // saved!
+
 });
         res.redirect('/login')
 
