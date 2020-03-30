@@ -12,7 +12,7 @@ const session = require('express-session')
 const methodOverride = require('method-override')
 const mongoose = require('mongoose')
 const User = require('./users')
-
+const expressLayouts = require('express-ejs-layouts')
 //Connecting MongoDB and creating model
 mongoose.connect('mongodb://localhost:27017/passportauth', {useNewUrlParser: true, useUnifiedTopology: true })
     .then(() => console.log("MongoDB Connected."))

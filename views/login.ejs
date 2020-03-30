@@ -1,25 +1,62 @@
-<h1>LOGIN</h1>
-<% if(messages.error){ %>
-    <%= messages.error  %>
-    <% } %>  
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"  media="screen,projection"/>
 
-<form action="/login" method="POST">
-   
-    <div>
-        <label for="email">Email</label>
-        <input type="email" name="email" id="email" required>
+    <title>Login</title>
+</head>
+<body>
+    <!--Start Login Page-->
 
+    <div class="container row">
+        <div class="col s12 m8 l8 offset-l2">
+            <div class="card medium blue-grey darken-1 center-align z-depth-4">
+                <div class="card-content white-text">
+                    <span class="card-title">LOGIN</span>
+                    <div class="red-text">
+                        <% if(messages.error){ %>
+                            <%= messages.error  %>
+                            <% } %>  
+                        
+                    </div>
+                        
+                        <form action="/login" method="POST">
+                        <div class="row">
+                            <div class="col s12  m8 offset-m2">
+                                <input type="email" name="email" id="email" class="validate" required>
+                                <label for="email">Email</label>
+                            </div>
+                        </div>
+                        
+                        <div class="row">
+                            <div class="col s12 m8 offset-m2">
+                                <input type="password" name="password" id="password" class="validate" required>
+                                <label for="password">Password</label>
+                            </div>
+                        </div>
+
+                        <div class="card-action">
+                            <button class="btn waves-effect waves-green" type="submit" name="submit">LOGIN</button>
+                        </form>
+                        </div>
+                        
+            
+        </div>
     </div>
 
-    <div>
-        <label for="password">Password</label>
-        <input type="password" name="password" id="password" required>
+    <div class="row">
+        <div class="center-align">
+        <h3>Don't have an account?</h3>
+        <button class="btn-flat waves-effect waves-light"><a class="blue-grey-text" href="/register">Register</a></button>
+        </div>
 
     </div>
     
-    <br>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js">
+        M.AutoInit();
+    </script>
 
-    <button type="submit">LOGIN</button>
-</form>
-
-<a href="/register">REGISTER</a>
+</body>
+</html>

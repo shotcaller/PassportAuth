@@ -1,27 +1,64 @@
-<h1>REGISTER</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"><link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"  media="screen,projection"/>
+    <title>Register</title>
+</head>
+<body>
+    <!--Registeration Page starts-->
 
-<form action="/register" method="POST">
-    <div>
-        <label for="name">Name</label>
-        <input type="text" name="name" id="name" required>
+    <div class="container row">
+        <div class="col s12 m8 l8 offset-l2">
+            <div class="card medium blue-grey darken-1 center-align z-depth-4">
+                <div class="card-content white-text">
+                    <span class="card-title">REGISTER</span>
 
+                    <form action="/register" method="POST">
+                        <div class="row">
+                            <div class="col s12  m8 offset-m2">
+                                <input type="text" name="name" id="name" class="validate" required>
+                                <label for="name">Name</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col s12  m8 offset-m2">
+                                <input type="email" name="email" id="email" class="validate" required>
+                                <label for="email">Email</label>
+                                <span class="helper-text" data-error="Invalid Email" data-success="Valid Email"></span>
+                            </div>
+                            
+                            <div class="row">
+                                <div class="col s12  m8 offset-m2">
+                                    <input type="password" name="password" id="password" class="validate" required>
+                                    <label for="password">Password</label>
+                                </div>
+                            </div>
+
+                        <div class="card-action">
+                            <button class="btn waves-effect waves-green left" type="submit" name="submit">REGISTER</button>
+                            <button class="btn waves-effect waves-light right"><a class="white-text" href="/login">Login</a></button>
+                            </form>
+                        </div>
+                </div>  
+            </div>
+        </div>
     </div>
 
-    <div>
-        <label for="email">Email</label>
-        <input type="email" name="email" id="email" required>
+   
 
-    </div>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js">
+        M.AutoInit();
+    </script>
 
-    <div>
-        <label for="password">Password</label>
-        <input type="password" name="password" id="password" required>
-
-    </div>
     
-    <br>
+</body>
+</html>
 
-    <button type="submit">REGISTER</button>
-</form>
 
-<a href="/login">LOGIN</a>
+
+
+   
+    
+   
